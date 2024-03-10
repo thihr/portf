@@ -1,0 +1,222 @@
+<html>
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Experiência - Thiago</title>
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <link rel="stylesheet" href="experiencia.css">
+    </head>
+    <header>
+        <nav>
+            <a class="logo" href="index.html">Meu Portfólio</a>
+            <ul class="nav-list">
+                <li><a href="experiencia.html">EXPERIÊNCIA</a></li>
+                <li><a href="projetos.html">PROJETOS</a></li>
+                <li><a href="contato.html">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main><div class="rosver"> <img src="imagens/thi.png"></div></main>
+    <!--<div class="tituloExp">
+        <h1>MINHAS EXPERIÊNCIAS</h1>
+    </div>-->
+    <div class="containerExp">
+        <p>MINHAS <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+      </div>
+      <script> const typedTextSpan = document.querySelector(".typed-text");
+        const cursorSpan = document.querySelector(".cursor");
+        
+        const textArray = ["EXPERIÊNCIAS", "CERTIFICAÇÕES", "LINGUAGENS"];
+        const typingDelay = 100;
+        const erasingDelay = 100;
+        const newTextDelay = 2000; // Delay between current and next text
+        let textArrayIndex = 0;
+        let charIndex = 0;
+        
+        function type() {
+          if (charIndex < textArray[textArrayIndex].length) {
+            if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+            typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, typingDelay);
+          } 
+          else {
+            cursorSpan.classList.remove("typing");
+            setTimeout(erase, newTextDelay);
+          }
+        }
+        
+        function erase() {
+          if (charIndex > 0) {
+            if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+            charIndex--;
+            setTimeout(erase, erasingDelay);
+          } 
+          else {
+            cursorSpan.classList.remove("typing");
+            textArrayIndex++;
+            if(textArrayIndex>=textArray.length) textArrayIndex=0;
+            setTimeout(type, typingDelay + 1100);
+          }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+          if(textArray.length) setTimeout(type, newTextDelay + 250);
+        });</script>
+    <body>
+        <!-- 2 CARROSSEL <div class="containerCarrossel">
+            <input type="radio" name="slider" id="item1" checked>
+            <input type="radio" name="slider" id="item1">
+            <input type="radio" name="slider" id="item1">
+            <input type="radio" name="slider" id="item1">
+            <div class="cards">
+                <label class="card" for="item-1" id="song-1">
+                    <img src="imagens/laranja.png">
+                </label>
+                <label class="card" for="item-2" id="song-2">
+                    <img src="imagens/marrom.png">
+                </label>
+                <label class="card" for="item-3" id="song-3">
+                    <img src="imagens/amarelo.png">
+                </label>
+                <label class="card" for="item-4" id="song-4">
+                    <img src="imagens/predio.png">
+                </label>
+            </div>
+        </div> -->
+        <!--<div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url(imagens/predio.png)">
+
+                </div>
+                <div class="swiper-slide2" style="background-image: url(imagens/marrom.png)">
+
+                </div>
+                <div class="swiper-slide3" style="background-image: url(imagens/laranja.png)">
+
+                </div>
+                <div class="swiper-slide4" style="background-image: url(imagens/amarelo.png)">
+
+                </div>
+            </div>
+        </div>-->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+        </script>
+        <script src="oi.es6"></script>-->
+         <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="foto">
+                <img src="imagens/htmlll.png"/>
+                <div class="comentario">
+                    <p>HTML básico</p>
+                </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="foto2">
+                <img src="imagens/css3.png"/>
+                <div class="comentario2">
+                    <p>CSS básico</p>
+                </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="foto3">
+                <img src="imagens/idioma.png"/>
+                <div class="comentario3">
+                    <p>Inglês nível C1
+                        <br>
+                        com certificado
+                    </p>
+                </div>
+            </div>
+          </div>
+      <div class="swiper-slide">
+        <div class="foto3">
+            <img src="imagens/adobe.png"/>
+            <div class="comentario3">
+                <p>Curso Adobe UX|UI
+                    <br> em progresso</p>
+            </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="foto4">
+            <img src="imagens/javascript.png"/>
+            <div class="comentario4">
+                <p>Curso JavaScript (Ûdemy)
+                    <br> em progresso</p>
+            </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="foto5">
+            <img src="imagens/tgrupo.png"/>
+            <div class="comentario5">
+                <p>Comunicação e trabalho em grupo</p>
+            </div>
+        </div>
+      </div>
+      <!--<div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+      </div> -->
+    </div>
+  </div>
+
+        <div class="rsBar">
+            <div class="box">
+                <div class="iconLk">
+                    <a href="https://www.linkedin.com/in/thiago-henrique-russi-9495042b8/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </div>
+                <a href="https://www.linkedin.com/in/thiago-henrique-russi-9495042b8/" target="_blank" rel="noopener noreferrer"><p>LinkedIn</p></a>
+                <div class="iconGit">
+                    <a href="https://github.com/thihr" target="_blank" rel="noopener noreferrer"><p>GitHub</p></a>
+                    <a href="https://github.com/thihr" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-github"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+
+        </footer>
+
+
+        <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 20,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: false,
+      },
+      loop: true,
+    });
+  </script>
+    </body>
+
+</html>
